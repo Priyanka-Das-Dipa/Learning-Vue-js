@@ -1,20 +1,25 @@
-<!DOCTYPE html>
+<!-- Handling everything form index.html file  -->
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
     <title>Document</title>
   </head>
   <body>
     <div id="app">
-      <h1>{{ message }}</h1>
+      <h1 v-bind:style="{ fontSize: fontSizeTemp +'px' }">Hello Developer</h1>
+      <h1 v-bind:style="{ color: 'red' }">{{ message }}</h1>
       <p>Your lucky number is: {{ luckyNum }}</p>
       <p>All the employees: {{ employees }}</p>
+      <p>All Random Number is : {{getRandomNumber() }}</p>
     </div>
   </body>
   <script>
     const { createApp } = Vue;
+    const fontSizeTemp = 60;
     const message = "Hello, Vue 3!";
     const luckyNum = 7;
     const employees = [
@@ -22,14 +27,35 @@
       { name: "Bob", age: 25 },
       { name: "Charlie", age: 35 },
     ];
+    function getRandomNumber() {
+      return Math.floor(Math.random() * 10 + 5);
+    }
     createApp({
       setup() {
         return {
           message,
           luckyNum,
           employees,
+          getRandomNumber,
+          fontSizeTemp,
         };
       },
     }).mount("#app");
   </script>
+</html> -->
+
+<!-- Handling everything form app.js file -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="app.js"></script>
+</body>
 </html>
