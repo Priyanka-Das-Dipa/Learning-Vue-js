@@ -55,7 +55,14 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <p>{{ title}} - {{ author}} - {{designation}} - {{age}}</p>
+    <!-- v-on and @ is same -->
+    <button v-on:click="age++">Increase Age</button>
+    <button @click="age--">Decrease Age</button>
+    <!-- title change with a method -->
+    <button @click="changeTitle">Change Title</button>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
