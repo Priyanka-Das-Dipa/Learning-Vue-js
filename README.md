@@ -10,7 +10,7 @@ This repo documents my **chapter-wise learning journey**, where each chapter cov
 
 | Chapter | Topic | Description |
 |----------|--------|-------------|
-| [Chapter 1](./chapter-1-core-concepts/README.md) | **Core Concepts** | Reactivity system, directives, template syntax, event modifiers |
+| [Chapter 1](./chapter-1-core-concept/README.md) | **Core Concepts** | Reactivity system, directives, template syntax, event modifiers |
 | [Chapter 2](./chapter-2-components-lifecycle/README.md) | **Components & Lifecycle Hooks** | Props, emits, slots, and lifecycle events |
 | [Chapter 3](./chapter-3-composition-api/README.md) | **Composition API** | setup(), composables, reactive logic reuse |
 | [Chapter 4](./chapter-4-routing-pinia/README.md) | **Routing & State Management** | Vue Router + Pinia integration |
