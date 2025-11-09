@@ -17,4 +17,12 @@ This repo documents my **chapter-wise learning journey**, where each chapter cov
 | Chapter 5 | **Animations & Transitions** | Transition components, animations, page effects |
 
 ---
+## 🚀 Setup & Run
+Each chapter folder is a standalone Vite project.  
+To run any chapter:
 
+```bash
+cd Chapter-1-core-concept
+npm install
+npm run dev
+``` 
