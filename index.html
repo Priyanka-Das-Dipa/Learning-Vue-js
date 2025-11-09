@@ -54,7 +54,7 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Document</title>
     <style>
-      .box{
+      .box {
         padding: 100px 0px;
         text-align: center;
         margin: 20px;
@@ -77,18 +77,34 @@
         <button @click="changeTitle('Changed the title')">Change Title</button>
       </div>
       <button v-bind:style="{ margin: '10px' }" @click="toggleShowBooks">
-       <span v-if="showDetails" v-bind:style="{ color: 'red' }"> Hide Books</span>
-       <!-- <span v-if="!showDetails" v-bind:style="{ color: 'blue' }"  > Show Books</span> -->
+        <span v-if="showDetails" v-bind:style="{ color: 'red' }">
+          Hide Books</span
+        >
+        <!-- <span v-if="!showDetails" v-bind:style="{ color: 'blue' }"  > Show Books</span> -->
         <span v-else v-bind:style="{ color: 'blue' }">Show Books</span>
       </button>
-      <br>
+      <br />
 
       <div class="box" @mouseover="handleEvent">Mouse Over(Center)</div>
       <div class="box" @mouseleave="handleEvent">Mouse Leave</div>
       <div class="box" @dblclick="handleEvent">Double Click</div>
-      <div class="box" @mousemove="handleMouseMove">MouseMove {{x}} , {{y}}</div>
+      <div class="box" @mousemove="handleMouseMove">
+        MouseMove {{x}} , {{y}}
+      </div>
     </div>
-
+    <!-- maping the data with v-for -->
+    <div id="app2">
+      <ul>
+        <!-- dynamic link -->
+         <!-- Atribute Binding  -->
+        <!-- <a v-bind:href="url">Google link</a> -->
+        <li v-for="book in books">
+          <img :src="book.img" :alt="book.title">
+          <h3>{{book.title}}</h3>
+          <p>{{book.author}}</p>
+        </li>
+      </ul>
+    </div>
 
     <script src="app.js"></script>
   </body>
