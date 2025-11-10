@@ -39,12 +39,17 @@
   </section>
 </template>
 
+
+// setup script block for Vue 3 Composition API
 <script setup>
 import { ref, reactive, computed, watch } from 'vue'
+import imageSrc from '../assets/image.png'
+
 
 const count = ref(0)
 const user = reactive({ name: '' })
 const double = computed(() => count.value * 2)
+
 
 watch(count, (newVal) => console.log('Count changed:', newVal))
 
@@ -54,7 +59,7 @@ const items = ref([
   { id: 2, text: 'Explore directives' },
   { id: 3, text: 'Practice events' }
 ])
-const imageUrl = ref('https://via.placeholder.com/100')
+const imageUrl = ref(imageSrc)
 const rawHtml = ref('<strong>Rendered with v-html</strong>')
 const plainText = ref('Rendered with v-text')
 
@@ -74,6 +79,7 @@ function toggleColor() {
 }
 </script>
 
+// when using scoped styles, they only apply to this component
 <style scoped>
 .active {
   background: #eef2ff;
